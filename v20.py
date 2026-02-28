@@ -1188,9 +1188,9 @@ def run_alerts(symbol, period_label, df, trigger_ai=False, mkt=None):
     signal_summary = "、".join(new_signals)
     prompt = build_analysis_prompt(symbol, period_label, df, mkt)
     # 在 prompt 頭部加入觸發信號說明
-    prompt = f"【觸發信號】{symbol} {period_label} 剛出現：{signal_summary}
+    prompt = f"""【觸發信號】{symbol} {period_label} 剛出現：{signal_summary}
 
-" + prompt
+""" + prompt
 
     result = call_groq_analysis(prompt)
     result["_signals"]      = new_signals
