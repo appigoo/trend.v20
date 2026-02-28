@@ -776,6 +776,15 @@ def get_anthropic_key():                       return get_groq_key()
 
 # 各供應商說明
 PROVIDER_INFO = {
+        "groq": {
+        "name":        "Groq LLaMA 3.3 70B",
+        "free":        True,
+        "quota":       "每天 14,400 次",
+        "url":         "https://console.groq.com/keys",
+        "placeholder": "gsk_...",
+        "secret_key":  "GROQ_API_KEY",
+        "guide":       "前往 console.groq.com → API Keys → Create API Key",
+    },
     "gemini": {
         "name":        "Gemini 2.0 Flash",
         "free":        True,
@@ -784,15 +793,6 @@ PROVIDER_INFO = {
         "placeholder": "AIza...",
         "secret_key":  "GEMINI_API_KEY",
         "guide":       "前往 aistudio.google.com → Get API Key → Create API Key",
-    },
-    "groq": {
-        "name":        "Groq LLaMA 3.3 70B",
-        "free":        True,
-        "quota":       "每天 14,400 次",
-        "url":         "https://console.groq.com/keys",
-        "placeholder": "gsk_...",
-        "secret_key":  "GROQ_API_KEY",
-        "guide":       "前往 console.groq.com → API Keys → Create API Key",
     },
     "claude": {
         "name":        "Claude Sonnet",
